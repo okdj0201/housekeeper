@@ -1,0 +1,27 @@
+target_dir:
+  - '/Users/jun.b.okada/Downloads'
+  - '/Users/jun.b.okada/Desktop'
+exts:
+  csv: csv
+  dmg: dmg
+  doc: doc
+  drawio: drawio
+  jpg: jpg
+  jpeg: jpg
+  json: json
+  log: log
+  m4a: m4a
+  pdf: pdf
+  png: png
+  ppt: ppt
+  pptx: ppt
+  py: py
+  txt: txt
+  xls: xls
+  xlsx: xls
+  yaml: yml
+  yml: yml
+  zip: zip
+  tar.gz : tar
+  tgz : tar
+  other: other

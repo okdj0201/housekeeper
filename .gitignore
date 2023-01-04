@@ -21,3 +21,5 @@
 *tar.gz*
 *tgz*
 *other*
+!conf.yml
+!housekeep.py
