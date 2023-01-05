@@ -1,6 +1,7 @@
 target_dir:
-  - '/Users/jun.b.okada/Downloads'
-  - '/Users/jun.b.okada/Desktop'
+  - '~/Downloads'
+  - '~/Desktop'
+outdir: './'
 exts:
   csv: csv
   dmg: dmg

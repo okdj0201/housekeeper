@@ -5,6 +5,7 @@ import yaml
 import shutil
 import glob
 import os
+import pathlib
 
 
 def hk_argparse(conf):
@@ -20,11 +21,13 @@ def load_config():
 
 def housekeep(dirname, conf):
     for ext in conf['exts'].keys():
-        os.makedirs(f'./{conf["exts"][ext]}', exist_ok=True)
+        outdir = f'{conf["outdir"]}/{conf["exts"][ext]}'
+        os.makedirs(outdir, exist_ok=True)
         try:
-          target_list = glob.glob(f'{dirname}/*.{conf["exts"][ext]}')
+          expand_path = os.path.expanduser(dirname)
+          target_list = glob.glob(f'{expand_path}/*.{conf["exts"][ext]}')
           for target in target_list:
-            shutil.move(target, f'./{conf["exts"][ext]}')
+            shutil.move(target, outdir)
         except FileNotFoundError:
           pass
 
