@@ -23,8 +23,6 @@ def housekeep(dirname, conf):
     for ext in conf['exts'].keys():
         outdir = f'{conf["outdir"]}/{conf["exts"][ext]}'
         os.makedirs(outdir, exist_ok=True)
-        #if ext == 'tar.gz':
-        #    import pdb; pdb.set_trace()
         try:
           expand_path = os.path.expanduser(dirname)
           target_list = glob.glob(f'{expand_path}/*.{ext}')
