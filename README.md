@@ -8,11 +8,11 @@ housekeeperはあなたのLaptoopを(見かけ上)綺麗にするPythonアプリ
 * Python 3.x
 
 ## 実行方法
+デフォルトでは~/Desktop, ~/Downloads配下のファイルを仕分けますが、-dオプションで仕分けたいディレクトリを追加することも可能です。
 ```
 $ python housekeep.py
-# デフォルトでは~/Desktop, ~/Downloads配下のファイルを仕分けますが、-dオプションで仕分けたいディレクトリを追加することも可能です。
 $ python housekeep.py -d /hoge/fuga /foo/bar/baz
-```　
+```
 
 ## Desclimer
 * このスクリプトを実行すると、~/Desktop, ~/Downloadsならびにオプションで指定したディレクトリ配下のファイルをmvコマンドで移動させたような動きとなります。
