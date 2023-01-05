@@ -25,4 +25,5 @@ exts:
   zip: zip
   tar.gz : tar
   tgz : tar
+  md: md
   other: other
