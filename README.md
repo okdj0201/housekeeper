@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # housekeeper
 ## Overview
 housekeeperはあなたのLaptoopを(見かけ上)綺麗にするPythonアプリケーションです。
@@ -9,14 +7,14 @@ housekeeperはあなたのLaptoopを(見かけ上)綺麗にするPythonアプリ
 * Python 3.x
 
 ## インストール
-```
+```bash
 $ pip install .
 $ ln -s ./housekeep/conf.yml ~/.housekeep_conf.yml
 ```
 
 ## 実行方法
 デフォルトでは~/Desktop, ~/Downloads配下のファイルを仕分けますが、-dオプションで仕分けたいディレクトリを追加することも可能です。
-```
+```bash
 $ housekeep
 $ housekeep -d /hoge/fuga /foo/bar/baz
 ```
@@ -59,4 +57,3 @@ exts:         #仕分けルールです。.csvで終わるファイルをcsvデ�
   other: other
 
 ```
->>>>>>> 73410b07d6e3e361424da079e4bb634a985b5498
