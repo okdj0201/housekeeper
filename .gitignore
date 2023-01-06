@@ -21,5 +21,7 @@
 *tar.gz*
 *tgz*
 *other*
-!conf.yml
-!housekeep.py
+!housekeep/conf.yml
+!housekeep/housekeep.py
+!housekeep/__init__.py
+!setup.py

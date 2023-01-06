@@ -8,20 +8,28 @@ import os
 import pathlib
 
 
-def hk_argparse(conf):
+def hk_argparse():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dir', '-d', nargs="*", type=str, help='Target dir name')
-    if parser.parse_args().dir:
+    parser.add_argument('--conf', '-c', type=str, help='Configuration file name')
+    return parser.parse_args()
+
+def expand_target_dir(conf, dirs):
+    if dirs:
         conf['target_dir'].extend(parser.parse_args().dir)
 
-def load_config():
-    with open('./conf.yml') as f:
+def load_config(conf):
+    if conf:
+        conf_path = conf
+    else:
+        conf_path = os.path.expanduser('~/.housekeep_conf.yml')
+    with open(conf_path) as f:
         conf = yaml.safe_load(f)
     return conf
 
 def housekeep(dirname, conf):
     for ext in conf['exts'].keys():
-        outdir = f'{conf["outdir"]}/{conf["exts"][ext]}'
+        outdir = os.path.expanduser(f'{conf["outdir"]}/{conf["exts"][ext]}')
         os.makedirs(outdir, exist_ok=True)
         try:
           expand_path = os.path.expanduser(dirname)
@@ -32,8 +40,9 @@ def housekeep(dirname, conf):
           pass
 
 def main():
-    conf = load_config()
-    hk_argparse(conf)
+    args = hk_argparse()
+    conf = load_config(args.conf)
+    expand_target_dir(conf, args.dir)
     for dirname in conf['target_dir']:
         housekeep(dirname, conf)
 

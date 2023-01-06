@@ -4,14 +4,19 @@ housekeeperはあなたのLaptoopを(見かけ上)綺麗にするPythonアプリ
 ~/Desktop, ~/Downloads配下に散らかった様々なファイルを拡張子ごとに仕分けて移動させます。
 
 ## 動作環境
-* Mac OS zsh環境での動作は確認済み。
 * Python 3.x
+
+## インストール
+```
+$ pip install .
+$ ln -s ./housekeep/conf.yml ~/.housekeep_conf.yml
+```
 
 ## 実行方法
 デフォルトでは~/Desktop, ~/Downloads配下のファイルを仕分けますが、-dオプションで仕分けたいディレクトリを追加することも可能です。
 ```
-$ python housekeep.py
-$ python housekeep.py -d /hoge/fuga /foo/bar/baz
+$ housekeep
+$ housekeep -d /hoge/fuga /foo/bar/baz
 ```
 
 ## Desclimer

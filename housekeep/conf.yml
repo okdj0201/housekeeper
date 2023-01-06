@@ -1,11 +1,12 @@
 target_dir:
   - '~/Downloads'
   - '~/Desktop'
-outdir: './'
+outdir: '~/housekeep/'
 exts:
   csv: csv
   dmg: dmg
   doc: doc
+  docx: doc
   drawio: drawio
   jpg: jpg
   jpeg: jpg
