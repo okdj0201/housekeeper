@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "housekeeper"
+version = "0.1.0"
+description = ""
+authors = ["kazushige takeuchi <kazushige.takeuchi@sony.com>"]
+readme = "README.md"
+packages = [{include = "housekeeper", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+dependency-injector = "^4.41.0"
+pyyaml = "^6.0"
+click = "^8.1.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project.scripts]
+housekeep = "housekeep:housekeep"
