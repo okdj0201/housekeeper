@@ -9,7 +9,7 @@ housekeeperはあなたのLaptoopを(見かけ上)綺麗にするPythonアプリ
 ## インストール
 ```
 $ pip install .
-$ ln -s ./housekeep/conf.yml ~/.housekeep_conf.yml
+$ cp -pr ./housekeep/conf.yml ~/.housekeep_conf.yml
 ```
 
 ## 実行方法
