@@ -4,6 +4,7 @@ import argparse
 import yaml
 import shutil
 import glob
+import datetime
 import os
 import pathlib
 
@@ -35,7 +36,12 @@ def housekeep(dirname, conf):
           expand_path = os.path.expanduser(dirname)
           target_list = glob.glob(f'{expand_path}/*.{ext}')
           for target in target_list:
-            shutil.move(target, outdir)
+            try:
+              shutil.move(target, outdir)
+            except:
+              fname=f'{target.rsplit("/")[-1]}_{str(datetime.date.today())}'
+              newout = os.path.join(outdir,fname)
+              shutil.move(target, newout)
         except FileNotFoundError:
           pass
 
