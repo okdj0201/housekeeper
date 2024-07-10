@@ -5,10 +5,11 @@ housekeeperはあなたのLaptoopを(見かけ上)綺麗にするPythonアプリ
 
 ## 動作環境
 * Python 3.x
+* Rye
 
 ## インストール
 ```
-$ rye instal .
+$ rye install .
 $ cp -pr ./housekeep/conf.yml ~/.housekeep_conf.yml
 ```
 
