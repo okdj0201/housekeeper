@@ -45,13 +45,9 @@ def housekeep(dirname, conf):
         except FileNotFoundError:
           pass
 
-def main():
+def do_housekeep():
     args = hk_argparse()
     conf = load_config(args.conf)
     expand_target_dir(conf, args.dir)
     for dirname in conf['target_dir']:
         housekeep(dirname, conf)
-
-if __name__ == '__main__':
-    main()
-

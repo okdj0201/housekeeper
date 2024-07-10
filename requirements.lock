@@ -10,17 +10,3 @@
 #   universal: false
 
 -e file:.
-argparse==1.4.0
-    # via housekeeper
-datetime==5.5
-    # via housekeeper
-pathlib==1.0.1
-    # via housekeeper
-pytz==2024.1
-    # via datetime
-pyyaml==6.0.1
-    # via housekeeper
-setuptools==70.2.0
-    # via zope-interface
-zope-interface==6.4.post2
-    # via datetime

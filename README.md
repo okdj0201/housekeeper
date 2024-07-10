@@ -8,7 +8,7 @@ housekeeperはあなたのLaptoopを(見かけ上)綺麗にするPythonアプリ
 
 ## インストール
 ```
-$ pip install .
+$ rye instal .
 $ cp -pr ./housekeep/conf.yml ~/.housekeep_conf.yml
 ```
 
