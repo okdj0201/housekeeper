@@ -10,7 +10,6 @@ housekeeperはあなたのLaptoopを(見かけ上)綺麗にするPythonアプリ
 ## インストール
 ```
 $ rye install .
-$ cp -pr ./housekeep/conf.yml ~/.housekeep_conf.yml
 ```
 
 ## 実行方法
